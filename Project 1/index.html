@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2d017ccb5b.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+            margin: 15px;
+        }
+        .container{
+            display: flex;
+            height: 100vh;
+        }
+        .left-section{
+            width: 35%;
+            height: 100vh;
+            background-color: rgb(74, 74, 74);
+            color: white;
+        }
+        .profile{
+            background-color: #5271ff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .profile img{
+            height: 100px;
+            width: 100px;
+            margin: 1rem;
+        }
+        .profile h2{
+            color: white;
+            font-variant: small-caps;
+            font-size: 1.75rem;
+            letter-spacing: 1px;
+        }
+        .profile h4{
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        .profile .links a{
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem ;
+        }
+        .profile .links i{
+            margin: 5px;
+            padding: 5px ;
+        }
+        .tab{
+            margin-top: 15px;
+            padding: 0px 1.25rem;
+        }
+        .tab h2{
+            font-weight: 400;
+        }
+        .tab .ruler{
+            border: solid 1px white;
+            margin-bottom: 5px;
+        }
+        .tab .contact-details{
+            padding: 0px 20px;
+            margin-top: 5px;
+        }
+        .tab .contact-details h3{
+            font-weight: 400;
+            font-size: 16px;
+        }
+        .tab .contact-details p{
+            color: rgb(159, 159, 159);
+        }
+        .contact{
+            padding-top: 10px; 
+        }
+        .skill-details h3{
+            font-weight: 400;
+            padding: 0px 20px;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+        .skill-details .loader{
+            height: 4px;
+            margin: 0px 20px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        .skill-details .loading1{
+            background-color: aqua;
+            width: 98%;
+            height: 4px;
+        }
+        .skill-details .loading2{
+            background-color: aqua;
+            width: 90%;
+            height: 4px;
+        }
+        .skill-details .loading3{
+            background-color: aqua;
+            width: 60%;
+            height: 4px;
+        }
+        .skill-details .loading4{
+            background-color: aqua;
+            width: 20%;
+            height: 4px;
+        }
+        .skill-details .loading5{
+            background-color: aqua;
+            width: 2%;
+            height: 4px;
+        }
+        .skill-details .loading6{
+            background-color: aqua;
+            width: 40%;
+            height: 4px;
+        }
+        .certificates-heading{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .certificates p {
+            padding: 0px 20px;
+            margin-top: 5px;
+        }
+
+        .right-section{
+            width: 65%;
+            margin: 0px 2rem;
+            text-align: justify;
+        }
+        .right-tab{
+            margin-bottom: 5px;
+        }
+        .right-tab h2{
+            color: #5271ff;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .right-ruler{
+            border: solid 1px black;
+            margin-bottom: 5px;
+        }
+        .work-details{
+            display: flex;
+            gap: 15px;
+            margin: 5px;
+        }
+        .project-details{
+            display: flex;
+            align-items: start;
+            gap: 15px;
+            margin-top: 5px;
+        }
+        .right-tab i{
+            padding-top: 5px;
+        }
+        .work-details-heading{
+            display: flex;
+            justify-content: space-between;
+        }
+        .from-to{
+            padding-right: 10px;
+        }
+        .right-tab h3{
+            font-size: 16px;
+        }
+        .right-tab p{
+            font-size: 15px;
+        }
+        .group{
+            display: flex;
+            justify-content: space-between;
+        }
+        .education-group{
+            display: flex;
+            gap: 40px;
+        }
+        
+
+        @media print {
+            .profile h2{
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+            .profile .links a{
+                padding: 0px ;
+            }
+        }
+
+        @media (min-width:1280px) {
+            .container{
+                max-width: 1280px;
+                margin: auto;
+            }
+            .right-section{
+                display: flex;
+                height: 100vh;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .group{
+                display: flex;
+                flex-direction: column;
+            }
+            .education-group{
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="left-section">
+            <div class="profile">
+                <img src="asset/profile.png" alt="profile photo" />
+                <h2>Vishal Sudhanshu</h2>
+                <h4>Web Developer</h4>
+                <div class="links">
+                    <a target="_blank" href="https://www.github.com"><i class="fa-brands fa-github"></i>Github</a>
+                    <a target="_blank" href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+                </div>
+            </div>
+            <div class="tab contact">
+                <h2>Contact</h2>
+                <div class="ruler"></div>
+                <div class="contact-details">
+                    <h3>Phone</h3>
+                    <p>XXXXXXXXXX</p>
+                </div>
+                <div class="contact-details">
+                    <h3>Email</h3>
+                    <p>abc@xyz.com</p>
+                </div>
+            </div>
+            <div class="tab skills">
+                <h2>Skills</h2>
+                <div class="ruler"></div>
+                <div class="skill-details">
+                    <h3>HTML 5</h3>
+                    <div class="loader">
+                        <div class="loading1"></div>
+                    </div>
+                </div>
+                <div class="skill-details">
+                    <h3>CSS 3</h3>
+                    <div class="loader">
+                        <div class="loading2"></div>
+                    </div>
+                </div>
+                <div class="skill-details">
+                    <h3>Javascript</h3>
+                    <div class="loader">
+                        <div class="loading3"></div>
+                    </div>
+                </div>
+                <div class="skill-details">
+                    <h3>React.js</h3>
+                    <div class="loader">
+                        <div class="loading4"></div>
+                    </div>
+                </div>
+                <div class="skill-details">
+                    <h3>Express.js</h3>
+                    <div class="loader">
+                        <div class="loading5"></div>
+                    </div>
+                </div>
+                <div class="skill-details">
+                    <h3>My SQL</h3>
+                    <div class="loader">
+                        <div class="loading6"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab certificates">
+                <div class="certificates-heading">
+                    <h2>Certificates</h2>
+                    <i class="fa-solid fa-certificate"></i>
+                </div>
+                <div class="ruler"></div>
+                <p>Certificate 1</p>
+                <p>Certificate 2</p>
+                <p>Certificate 3</p>
+            </div>
+        </section>
+        <section class="right-section">
+            <div class="right-tab">
+                <h2>Objective</h2>
+                <div class="right-ruler"></div>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, est
+                    corrupti cum minus eveniet commodi laudantium, soluta doloribus
+                    corporis quos quia eum nihil animi dolores minima sunt, quibusdam
+                    voluptates dicta sint neque sapiente quisquam. Neque dolorum
+                    temporibus rem animi dolorem?
+                </p>
+            </div>
+            <div class="right-tab">
+                <h2>Work Experience</h2>
+                <div class="right-ruler"></div>
+                <div class="work-details">
+                    <i class="fa-solid fa-right-long"></i>
+                    <div class="work-detail-content">
+
+                        <div class="work-details-heading">
+                            <h3>Role Name 1</h3>
+                            <h3  class="from-to">FROM - TO</h3>
+                        </div>
+                        <h3>Company Name 1</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                            nesciunt perspiciatis quos sapiente.
+                        </p>
+                    </div>
+                </div>
+                <div class="work-details">
+                    <i class="fa-solid fa-right-long"></i>
+                    <div class="work-detail-content">
+
+                        <div class="work-details-heading">
+                            <h3>Role Name 2</h3>
+                            <h3  class="from-to">FROM - TO</h3>
+                        </div>
+                        <h3>Company Name 2</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                            nesciunt perspiciatis quos sapiente.
+                        </p>
+                    </div>
+                </div>
+                <div class="work-details">
+                    <i class="fa-solid fa-right-long"></i>
+                    <div class="work-detail-content">
+
+                        <div class="work-details-heading">
+                            <h3>Role Name 3</h3>
+                            <h3 class="from-to">FROM - TO</h3>
+                        </div>
+                        <h3>Company Name 3</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                            nesciunt perspiciatis quos sapiente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-tab">
+                <h2>Projects</h2>
+                <div class="right-ruler"></div>
+                <div class="project-details">
+                    <i class="fa-solid fa-right-long"></i>
+                    <div class="project-detail-content">
+                        <div class="group">
+                            <h3>Project Name 1</h3>
+                            <h3 class="from-to">TECH STACK</h3>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                            debitis fuga eveniet vero.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <i class="fa-solid fa-right-long"></i>
+                    <div class="project-detail-content">
+                        <div  class="group">
+                            <h3>Project Name 2</h3>
+                            <h3 class="from-to">TECH STACK</h3>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                            debitis fuga eveniet vero.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-tab education">
+                <h2>Education</h2>
+                <div class="right-ruler"></div>
+                <div class="project-details">
+                    <i class="fa-solid fa-right-long"></i>
+                    <div class="project-detail-content">
+                        <div  class="education-group">
+                            <h3>Education Name 2</h3>
+                            <h3>FROM - TO</h3>
+                        </div>
+                        <p>College/School Name 1</p>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <i class="fa-solid fa-right-long"></i>
+                    <div class="project-detail-content">
+                        <div  class="education-group">
+                            <h3>Education Name 2</h3>
+                            <h3>FROM - TO</h3>
+                        </div>
+                        <p>College/School Name 2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
