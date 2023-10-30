@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <title>Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <style>
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        html {
+            font-size: 62.5%;
+        } 
         body{
+            width: 100vw;
+            height: 100vh;
             font-family: 'Poppins', sans-serif;
+        }
+        :root{
+            --primary-color: #ed017f;
+            --secondary-color: #ffeaf5;
         }
         .wrapper{
             width: 100vw;
@@ -24,102 +34,194 @@
             background-position: center;
         }
         .navbar{
-            padding: 10px 2rem;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            padding: 0 4rem;
+            height: 8rem;
         }
-        ul{
+        .navbar .logo{
+            padding: 0 4rem;
+        }
+        .navbar ul{
             display: flex;
-            gap: 30px;
+            gap: 2rem;
         }
-        .navbar li {
+        .navbar ul li{
             list-style: none;
         }
-        .navbar li a{
+        .navbar ul a{
             text-decoration: none;
             color: black;
+            font-size: 1.8rem;
+            padding: 0 1rem;
+            text-transform: uppercase;
         }
         .search{
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 2rem;
         }
-        .search img{
-            width: 100%;
-            height: 100%;
-        }
-        .btn1{
-            background-color: #ed007e;
+        .btn{
+            background-color: var(--primary-color);
             color: white;
             border: none;
-            font-size: 16px;
-            padding: 8px 16px;
-            border-radius: 5px;
+            font-size: 1.8rem;
+            padding: 0.8rem 1.6rem;
+            border-radius: 0.5rem;
             cursor: pointer;
         }
-        .btn2{
-            background-color: white;
-            color: #ed007e;
-            border: solid #ed007e 2px;
-            font-size: 16px;
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .btn:hover{
-            background-color: #c20067;
-            color: white;
+        .search i{
+            display: none;
         }
         .hero-section{
             display: flex;
             justify-content: space-between;
         }
-        .right image{
-            height: 100%;
-        }
         .left{
-            margin-top: 8rem;
-            margin: 8rem auto 1rem auto;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            margin: 6rem;
+            padding: 3rem;
         }
-        .left h2{
-            font-weight: 700;
-            font-size: 4rem;
+        .left h1{
+            font-size: 8rem;
         }
         .left p{
-            margin: 1rem auto 2rem auto;
-            font-size: 1.5rem;
+            font-size: 2.5rem;
+            margin-top: 2rem;
+        }
+        .right{
+            width: 50%;
+        }
+        .right img{
+            width: 100%;
+            height: 100%;
         }
         .explore{
+            margin: 3rem 0;
             display: flex;
-            gap: 20px;
-        }
-        .explore .btn{
-            font-size: 20px;
+            gap: 2rem;
         }
         .contact-info{
+            width: 100%;
             display: flex;
+            justify-content: start;
             align-items: center;
-            flex: end;
             gap: 1rem;
-            margin-top: 3rem;
+            font-size: 2rem;
+            margin-top: 4rem;
+            margin-left: 1rem;
         }
         .contact-info span{
-            font-size: 22px;
-        }
-        .contact-info img{
-            height: 25px;
+            padding-bottom: .8rem;
         }
         .call{
             display: flex;
             align-items: center;
-            gap: 10px
+            gap: .6rem;
         }
-        @media (max-width:1440px) {
-            :root{
-                font-size: 18px;
+        .btn2{
+            background-color: white;
+            color: var(--primary-color);
+            border: solid var(--primary-color) ;
+        }
+        .btn:hover{
+            background-color: #c20067;
+            color: white;
+        }
+        @media screen and (max-width: 1440px){
+            .left h1{
+            font-size: 6rem;
+        }
+        .left p{
+            font-size: 2rem;
+        }
+        }
+        @media screen and (max-width: 1280px){
+            html{
+                font-size: 55%;
+                
             }
         }
+        @media screen and (max-width: 1024px) {
+            html{
+                font-size: 50%;
+            }
+            .navbar ul a{
+                font-size: 1.8rem;
+                padding: 0.5rem;
+            }
+            .navbar{
+                padding: 2rem;
+                height: 9rem;
+            }
+            .navbar .logo{
+            padding: 0 2rem;
+        }
+            .right{
+            width: 45%;
+             }
+            .left{
+                padding: 1rem;
+                width: 55%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            html{
+                font-size: 45%;
+            }
+            .navbar ul{
+                display: none;
+            }
+            .navbar{
+                padding: 1rem;
+                height: 10rem;
+            }
+            .search{
+                gap: 1rem;
+            }
+            .search i{
+                display: block;
+                font-size: 3rem;
+                background-color: var(--primary-color);
+                color: #fff;
+                padding: .2rem .5rem;
+                border-radius: .5rem;
+                margin: 0 1rem;
+                cursor: pointer;
+            }
+            .hero-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .left{
+            width: fit-content;
+            margin: 15rem auto;
+        }
+        .right{
+            display: none ;
+        }
+        .left h1{
+            font-size: 5rem;
+        }
+        .explore{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .contact-info{
+            justify-content: center;
+            margin-left: 0;
+        }
+        .wrapper{
+            background: var(--secondary-color);
+        }
+    }
     </style>
 </head>
 <body>
@@ -128,27 +230,27 @@
             <div class="logo">
                 <img src="Assets/website-logo.png" alt="">
             </div>
-            <div class="tabs">
-                <ul>
-                    <li><a href="#">Retail</a></li>
-                    <li><a href="#">SMS</a></li>
-                    <li><a href="#">Corporate</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Covid 19</a></li>
-                    <li><a href="#">Campgains</a></li>
-                </ul>
-            </div>
+            <ul>
+                <li><a href="#">Retail</a></li>
+                <li><a href="#">SMS</a></li>
+                <li><a href="#">Corporate</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Covid 19</a></li>
+                <li><a href="#">Campgains</a></li>
+            </ul>
             <div class="search">
                 <img src="Assets/search-icon.png" alt="">
-                <button class="btn1">iServices</button>
+                <button class="btn">iServices</button>
+                <i class="ri-menu-3-line"></i>
             </div>
+
         </nav>
         <main class="hero-section">
             <section class="left">
-                <h2>Chase Your <br> Dream with us</h2>
+                <h1>Chase Your <br> Dream with us</h1>
                 <p>The harder you work for something, the <br>grater you'll feel when you achieve it</p>
                 <div class="explore">
-                    <button class="btn btn1">Apply Courses</button>
+                    <button class="btn ">Apply Courses</button>
                     <button class="btn btn2">Loan Calculator</button>
                 </div>
                 <div class="contact-info">
