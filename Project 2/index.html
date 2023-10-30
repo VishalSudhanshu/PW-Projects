@@ -133,6 +133,59 @@
             background-color: #c20067;
             color: white;
         }
+        #p1,#p2{
+            height:25px;
+            width:25px;
+            border-radius:50% 0 0 50%;
+        }
+        .loan-button span{
+            height: 3rem;
+            width: 9rem;
+        }
+        #p2{
+        border-radius:0 50% 50% 0;
+        }
+        .loan-button {
+            background-color: #fff;
+            display: flex;
+            gap: .2rem;
+            align-items: center;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5rem; 
+            cursor: pointer;
+            font-size: 1.6rem;
+            margin: 1rem;
+            box-shadow:
+                5px 5px 10px rgba(0, 0, 0, 0.3),  /* Right shadow */
+                -5px -5px 10px rgba(0, 0, 0, 0.3),  /* Left shadow */
+                5px -5px 10px rgba(0, 0, 0, 0.3),   /* Top shadow */
+                -5px 5px 10px rgba(0, 0, 0, 0.3);   /* Bottom shadow */
+        
+        }
+        .car-loan{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .home-loan{
+            position: absolute;
+            right: 5%;
+            top: 40%;
+        }
+        .loan-button span{
+            padding-top: .7rem;
+        }
+        .loan-button img{
+            width: 25px;
+            height: 25px;
+        }
+        .loan-button:hover {
+            background-color: var(--secondary-color);
+}
+
+
         @media screen and (max-width: 1440px){
             .left h1{
             font-size: 6rem;
@@ -177,6 +230,9 @@
             .navbar ul{
                 display: none;
             }
+            .wrapper{
+                background: var(--secondary-color);
+            }
             .navbar{
                 padding: 1rem;
                 height: 10rem;
@@ -218,8 +274,17 @@
             justify-content: center;
             margin-left: 0;
         }
-        .wrapper{
-            background: var(--secondary-color);
+        .car-loan{
+            position: fixed;
+            top: 70%;
+            left: 10%;
+            transform: translate(0px, 0px);
+            
+        }
+        .home-loan{
+            position: fixed;
+            top: 70%;
+            right: 10%;
         }
     }
     </style>
@@ -269,6 +334,14 @@
                 <img src="Assets/hero-image.png" alt="">
             </section>
         </main>
+        <button class="loan-button car-loan">
+            <img src="Assets/car.png" alt="car">
+            <span>Car Loan</span>
+        </button>
+        <button class="loan-button home-loan">
+            <img src="Assets/House.png" alt="house">
+            <span>Home Loan</span>
+        </button>
     </div>
 </body>
 </html>
