@@ -1,347 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 2</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        font-family: "Poppins", sans-serif;
+      }
+      :root {
+        --primary-color: #ed017f;
+        --secondary-color: #ffeaf5;
+      }
+      .wrapper {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("Assets/background-image.png");
+        background-size: cover;
+        background-position: center;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 4rem;
+        height: 8rem;
+      }
+      .navbar .logo {
+        padding: 0 4rem;
+      }
+      .navbar ul {
+        display: flex;
+        gap: 2rem;
+      }
+      .navbar ul li {
+        list-style: none;
+      }
+      .navbar ul a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.8rem;
+        padding: 0 1rem;
+        text-transform: uppercase;
+      }
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+      .btn {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        font-size: 1.8rem;
+        padding: 0.8rem 1.6rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+      .search i {
+        display: none;
+      }
+      .hero-section {
+        display: flex;
+        justify-content: space-between;
+      }
+      .left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin: 6rem;
+        padding: 3rem;
+      }
+      .left h1 {
+        font-size: 8rem;
+      }
+      .left p {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+      }
+      .right {
+        width: 50%;
+      }
+      .right img {
+        width: 100%;
+        height: 100%;
+      }
+      .explore {
+        margin: 3rem 0;
+        display: flex;
+        gap: 2rem;
+      }
+      .contact-info {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+        font-size: 2rem;
+        margin-top: 7rem;
+        margin-left: 1rem;
+      }
+      .contact-info span {
+        padding-bottom: 0.8rem;
+      }
+      .call {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+      .btn2 {
+        background-color: white;
+        color: var(--primary-color);
+        border: solid var(--primary-color);
+      }
+      .btn:hover {
+        background-color: #c20067;
+        color: white;
+      }
+      #p1,
+      #p2 {
+        height: 25px;
+        width: 25px;
+        border-radius: 50% 0 0 50%;
+      }
+      .loan-button span {
+        height: 3rem;
+        width: 9rem;
+      }
+      #p2 {
+        border-radius: 0 50% 50% 0;
+      }
+      .loan-button {
+        background-color: #fff;
+        display: flex;
+        gap: 0.2rem;
+        align-items: center;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 5rem;
+        cursor: pointer;
+        font-size: 1.6rem;
+        margin: 1rem;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
+          /* Right shadow */ -5px -5px 10px rgba(0, 0, 0, 0.3),
+          /* Left shadow */ 5px -5px 10px rgba(0, 0, 0, 0.3),
+          /* Top shadow */ -5px 5px 10px rgba(0, 0, 0, 0.3); /* Bottom shadow */
+      }
+      .car-loan {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .home-loan {
+        position: absolute;
+        right: 5%;
+        top: 40%;
+      }
+      .loan-button span {
+        padding-top: 0.7rem;
+      }
+      .loan-button img {
+        width: 25px;
+        height: 25px;
+      }
+      .loan-button:hover {
+        background-color: var(--secondary-color);
+      }
+
+      @media screen and (max-width: 1440px) {
+        .left h1 {
+          font-size: 6rem;
         }
+        .left p {
+          font-size: 2rem;
+        }
+      }
+      @media screen and (max-width: 1280px) {
         html {
-            font-size: 62.5%;
-        } 
-        body{
-            width: 100vw;
-            height: 100vh;
-            font-family: 'Poppins', sans-serif;
+          font-size: 55%;
         }
-        :root{
-            --primary-color: #ed017f;
-            --secondary-color: #ffeaf5;
+      }
+      @media screen and (max-width: 1024px) {
+        html {
+          font-size: 50%;
         }
-        .wrapper{
-            width: 100vw;
-            height: 100vh;
-            background-image: url("Assets/background-image.png");
-            background-size: cover;
-            background-position: center;
+        .navbar ul a {
+          font-size: 1.8rem;
+          padding: 0.5rem;
         }
-        .navbar{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 4rem;
-            height: 8rem;
+        .navbar {
+          padding: 2rem;
+          height: 9rem;
         }
-        .navbar .logo{
-            padding: 0 4rem;
+        .navbar .logo {
+          padding: 0 2rem;
         }
-        .navbar ul{
-            display: flex;
-            gap: 2rem;
+        .right {
+          width: 45%;
         }
-        .navbar ul li{
-            list-style: none;
+        .left {
+          padding: 1rem;
+          width: 55%;
         }
-        .navbar ul a{
-            text-decoration: none;
-            color: black;
-            font-size: 1.8rem;
-            padding: 0 1rem;
-            text-transform: uppercase;
+      }
+      @media screen and (max-width: 768px) {
+        html {
+          font-size: 45%;
         }
-        .search{
-            display: flex;
-            align-items: center;
-            gap: 2rem;
+        .navbar ul {
+          display: none;
         }
-        .btn{
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            font-size: 1.8rem;
-            padding: 0.8rem 1.6rem;
-            border-radius: 0.5rem;
-            cursor: pointer;
+        .wrapper {
+          background: var(--secondary-color);
         }
-        .search i{
-            display: none;
+        .navbar {
+          padding: 1rem;
+          height: 10rem;
         }
-        .hero-section{
-            display: flex;
-            justify-content: space-between;
+        .search {
+          gap: 1rem;
         }
-        .left{
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-            margin: 6rem;
-            padding: 3rem;
+        .search i {
+          display: block;
+          font-size: 3rem;
+          background-color: var(--primary-color);
+          color: #fff;
+          padding: 0.2rem 0.5rem;
+          border-radius: 0.5rem;
+          margin: 0 1rem;
+          cursor: pointer;
         }
-        .left h1{
-            font-size: 8rem;
+        .hero-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
-        .left p{
-            font-size: 2.5rem;
-            margin-top: 2rem;
+        .left {
+          width: fit-content;
+          margin: 15rem auto;
         }
-        .right{
-            width: 50%;
+        .right {
+          display: none;
         }
-        .right img{
-            width: 100%;
-            height: 100%;
+        .left h1 {
+          font-size: 5rem;
         }
-        .explore{
-            margin: 3rem 0;
-            display: flex;
-            gap: 2rem;
+        .explore {
+          width: 100%;
+          display: flex;
+          justify-content: center;
         }
-        .contact-info{
-            width: 100%;
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            gap: 1rem;
-            font-size: 2rem;
-            margin-top: 4rem;
-            margin-left: 1rem;
+        .contact-info {
+          justify-content: center;
+          margin-left: 0;
         }
-        .contact-info span{
-            padding-bottom: .8rem;
+        .car-loan {
+          position: fixed;
+          top: 70%;
+          left: 10%;
+          transform: translate(0px, 0px);
         }
-        .call{
-            display: flex;
-            align-items: center;
-            gap: .6rem;
+        .home-loan {
+          position: fixed;
+          top: 70%;
+          right: 10%;
         }
-        .btn2{
-            background-color: white;
-            color: var(--primary-color);
-            border: solid var(--primary-color) ;
-        }
-        .btn:hover{
-            background-color: #c20067;
-            color: white;
-        }
-        #p1,#p2{
-            height:25px;
-            width:25px;
-            border-radius:50% 0 0 50%;
-        }
-        .loan-button span{
-            height: 3rem;
-            width: 9rem;
-        }
-        #p2{
-        border-radius:0 50% 50% 0;
-        }
-        .loan-button {
-            background-color: #fff;
-            display: flex;
-            gap: .2rem;
-            align-items: center;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5rem; 
-            cursor: pointer;
-            font-size: 1.6rem;
-            margin: 1rem;
-            box-shadow:
-                5px 5px 10px rgba(0, 0, 0, 0.3),  /* Right shadow */
-                -5px -5px 10px rgba(0, 0, 0, 0.3),  /* Left shadow */
-                5px -5px 10px rgba(0, 0, 0, 0.3),   /* Top shadow */
-                -5px 5px 10px rgba(0, 0, 0, 0.3);   /* Bottom shadow */
-        
-        }
-        .car-loan{
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .home-loan{
-            position: absolute;
-            right: 5%;
-            top: 40%;
-        }
-        .loan-button span{
-            padding-top: .7rem;
-        }
-        .loan-button img{
-            width: 25px;
-            height: 25px;
-        }
-        .loan-button:hover {
-            background-color: var(--secondary-color);
-}
-
-
-        @media screen and (max-width: 1440px){
-            .left h1{
-            font-size: 6rem;
-        }
-        .left p{
-            font-size: 2rem;
-        }
-        }
-        @media screen and (max-width: 1280px){
-            html{
-                font-size: 55%;
-                
-            }
-        }
-        @media screen and (max-width: 1024px) {
-            html{
-                font-size: 50%;
-            }
-            .navbar ul a{
-                font-size: 1.8rem;
-                padding: 0.5rem;
-            }
-            .navbar{
-                padding: 2rem;
-                height: 9rem;
-            }
-            .navbar .logo{
-            padding: 0 2rem;
-        }
-            .right{
-            width: 45%;
-             }
-            .left{
-                padding: 1rem;
-                width: 55%;
-            }
-        }
-        @media screen and (max-width: 768px) {
-            html{
-                font-size: 45%;
-            }
-            .navbar ul{
-                display: none;
-            }
-            .wrapper{
-                background: var(--secondary-color);
-            }
-            .navbar{
-                padding: 1rem;
-                height: 10rem;
-            }
-            .search{
-                gap: 1rem;
-            }
-            .search i{
-                display: block;
-                font-size: 3rem;
-                background-color: var(--primary-color);
-                color: #fff;
-                padding: .2rem .5rem;
-                border-radius: .5rem;
-                margin: 0 1rem;
-                cursor: pointer;
-            }
-            .hero-section{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .left{
-            width: fit-content;
-            margin: 15rem auto;
-        }
-        .right{
-            display: none ;
-        }
-        .left h1{
-            font-size: 5rem;
-        }
-        .explore{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-        .contact-info{
-            justify-content: center;
-            margin-left: 0;
-        }
-        .car-loan{
-            position: fixed;
-            top: 70%;
-            left: 10%;
-            transform: translate(0px, 0px);
-            
-        }
-        .home-loan{
-            position: fixed;
-            top: 70%;
-            right: 10%;
-        }
-    }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="Assets/website-logo.png" alt="">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="Assets/website-logo.png" alt="" />
+        </div>
+        <ul>
+          <li><a href="#">Retail</a></li>
+          <li><a href="#">SMS</a></li>
+          <li><a href="#">Corporate</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Covid 19</a></li>
+          <li><a href="#">Campgains</a></li>
+        </ul>
+        <div class="search">
+          <img src="Assets/search-icon.png" alt="" />
+          <button class="btn">iServices</button>
+          <i class="ri-menu-3-line"></i>
+        </div>
+      </nav>
+      <main class="hero-section">
+        <section class="left">
+          <h1>
+            Chase Your <br />
+            Dream with us
+          </h1>
+          <p>
+            The harder you work for something, the <br />grater you'll feel when
+            you achieve it
+          </p>
+          <div class="explore">
+            <button class="btn">Apply Courses</button>
+            <button class="btn btn2">Loan Calculator</button>
+          </div>
+          <div class="contact-info">
+            <div class="call">
+              <a href="#"><img src="Assets/phone.png" alt="phone" /></a>
+              <span>1659</span>
             </div>
-            <ul>
-                <li><a href="#">Retail</a></li>
-                <li><a href="#">SMS</a></li>
-                <li><a href="#">Corporate</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Covid 19</a></li>
-                <li><a href="#">Campgains</a></li>
-            </ul>
-            <div class="search">
-                <img src="Assets/search-icon.png" alt="">
-                <button class="btn">iServices</button>
-                <i class="ri-menu-3-line"></i>
-            </div>
-
-        </nav>
-        <main class="hero-section">
-            <section class="left">
-                <h1>Chase Your <br> Dream with us</h1>
-                <p>The harder you work for something, the <br>grater you'll feel when you achieve it</p>
-                <div class="explore">
-                    <button class="btn ">Apply Courses</button>
-                    <button class="btn btn2">Loan Calculator</button>
-                </div>
-                <div class="contact-info">
-                    <div class="call">
-                        <a href="#"><img src="Assets/phone.png" alt="phone"></a>
-                        <span>1659</span>
-                    </div>
-                    <span>&#124;</span>
-                    <a href="#"><img src="Assets/facebook.png" alt="facebook"></a>
-                    <a href="#"><img src="Assets/youtube.png" alt="youtube"></a>
-                    <a href="#"><img src="Assets/linkedin.png" alt="linkedin"></a>
-                    <a href="#"><img src="Assets/instagram.png" alt="instagram"></a>
-                </div>
-            </section>
-            <section class="right">
-                <img src="Assets/hero-image.png" alt="">
-            </section>
-        </main>
-        <button class="loan-button car-loan">
-            <img src="Assets/car.png" alt="car">
-            <span>Car Loan</span>
-        </button>
-        <button class="loan-button home-loan">
-            <img src="Assets/House.png" alt="house">
-            <span>Home Loan</span>
-        </button>
+            <span>&#124;</span>
+            <a href="#"><img src="Assets/facebook.png" alt="facebook" /></a>
+            <a href="#"><img src="Assets/youtube.png" alt="youtube" /></a>
+            <a href="#"><img src="Assets/linkedin.png" alt="linkedin" /></a>
+            <a href="#"><img src="Assets/instagram.png" alt="instagram" /></a>
+          </div>
+        </section>
+        <section class="right">
+          <img src="Assets/hero-image.png" alt="" />
+        </section>
+      </main>
+      <button class="loan-button car-loan">
+        <img src="Assets/car.png" alt="car" />
+        <span>Car Loan</span>
+      </button>
+      <button class="loan-button home-loan">
+        <img src="Assets/House.png" alt="house" />
+        <span>Home Loan</span>
+      </button>
     </div>
-</body>
+  </body>
 </html>
