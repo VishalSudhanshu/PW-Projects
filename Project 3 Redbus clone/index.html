@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2d017ccb5b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <title>Redbus Clone</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --color-one: #d84e55;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            font-family: 'Montserrat', sans-serif;
+        }
+        nav{
+            display: flex;
+            height: 100px;
+            max-width: 1200px;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        nav span{
+            color: #949494;
+            font-size: 2rem;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+            width: 45%;
+            justify-content: space-between;
+        }
+        .navbar .logo img{
+            width: 8rem;
+            height: 4.8rem;
+        }
+        .tab-container{
+            display: flex;
+            text-align: center;
+        }
+        .tab{   
+            margin-right: 1.2rem;
+            padding: 1.4rem 1rem;
+        }
+        .tab img{
+            margin-bottom: 0.8rem;
+        }
+        .accounts{
+            display: flex;
+            text-align: center;
+        }
+        .accounts > .tab{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+        .accounts i{
+            font-size: 2.2rem;
+        }
+        .accounts p{
+            margin: 0 0.4rem 0 0.2rem;
+        }
+
+        /* main-section */
+        .hero-section{
+            box-sizing: border-box;
+            width: 100%;
+            height: 52rem;
+            background: url("https://st.redbus.in/Images/HomeIndia/HeroImage.png") 0% 0% / cover round;
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+        html{
+            font-size: 55%;
+        }
+        @media (min-width: 1500px) {
+            .hero-section{
+                height: 58  rem;
+            }
+        }
+        @media (max-width: 1280px) {
+            .hero-section{
+                background-size: contain;
+            }
+        }
+        .hero-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero-section h1{
+            color: white;
+            font-size: 3.7rem;
+            margin-top: 7rem;
+        }
+        .travel-info-container{
+            height: 10rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            margin-top: 4rem;
+            width: 55%;
+            max-width: 900px;
+            border-radius: 3rem;
+            gap: 10px;
+            padding-left: 2rem;
+        }
+        .travel-info{
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            padding-left: 2rem;
+            cursor: pointer;
+        }
+        .travel-info p{
+            padding: 1rem;
+        }
+        .travel-info i{
+            padding: 3rem;
+        }
+        .search-btn p{
+            background-color: var(--color-one);
+            padding: 3.8rem;
+            border-radius: 0 3rem 3rem 0 ;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .card{
+            color: white;
+            padding: 1.6rem;
+            height: 16.8rem;
+            width: 30rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .card1{
+            background-image: linear-gradient(to right, #144398, #376dcd);
+        }
+        .card2{
+            background-image: linear-gradient(to right, #2f566e, #4bbf8f);
+        }
+        .card3{
+            background-image: linear-gradient(to right, #630f13, #c7454c);
+        }
+        .card4{
+            background-image: linear-gradient(to right, #288ea7, #63cae3);
+        }
+        .card>img{
+            border-radius: 50%;
+            height: 7.2rem;
+            width: 7.2rem;
+        }
+        .card-info{
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+        }
+        .card-info span{
+            display: inline-block;
+            font-size: 1.2rem;
+            padding: .4rem .8rem;
+            background-color: #ffffff33;
+        }
+        .card-info h3{
+            font-size: 1.6rem;
+        }
+        .card-info p{
+            font-size: 1.2rem;
+        }
+        .promo-code{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .code{
+            border: 2px dashed;
+        }
+        .type{
+            width: fit-content;
+            border-radius: 20px;
+        }
+        .copy{
+            height: 2.4rem;
+            cursor: pointer;
+        }
+        .offer-container{
+            padding: 3.2rem;
+            background-color: white;
+            width: 105rem;
+            height: 30rem;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 4rem;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        .offer-heading{
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .offer-heading h2{
+            font-size: 3.2rem;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        .offer-heading button{
+            font-size: 1.8rem;
+            color: #103ede;
+            background-color: #fff;
+            padding: 1rem 2.4rem;
+            border-radius: 2.4rem;   
+            border: 1px solid gray;
+            cursor: pointer;
+        }
+        .cards-container{
+            display: flex;
+            gap: 2.4rem;
+            flex-wrap: wrap;
+        }
+        .ad-container{
+            padding-top: 28rem;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .ad-container img{
+            width: 50%;
+            max-width: 97rem;
+            height: 9rem;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://st.redbus.in/Images/rdc/rdc-redbus-logo.svg" alt="">
+                </div>
+
+                <span>|</span>
+    
+                <div class="tab-container">
+                    <div class="tab">
+                        <img src="https://st.redbus.in/web/images/layout/rb_vertical.svg" alt="">
+                        <p>Bus Tickets</p>
+                    </div>
+                    <div class="tab">
+                        <img src="https://st.redbus.in/web/images/layout/ryde_vertical.svg" alt="">
+                        <p>Cab Rental</p>
+                    </div>
+                    <div class="tab">
+                        <img src="https://st.redbus.in/web/images/layout/rail_vertical.svg" alt="">
+                        <p>Train Tickets</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accounts">
+                <div class="tab">
+                    <i class="ri-customer-service-line"></i>
+                    <p>Help</p>
+                </div>
+                <div class="tab">
+                    <i class="ri-account-circle-line"></i>
+                    <p>Account</p>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="hero-section">
+                <h1>India's No. 1 Online Bus Ticket Booking Site</h1>
+                <div class="travel-info-container">
+                    <div class="travel-info">
+                        <img src="assets/fromTrain.png" alt="">
+                        <p>From</p>
+                    </div>
+                    <div class="travel-info">
+                        <i class="fa-solid fa-right-left"></i>
+                        <img src="assets/toTrain.png" alt="">
+                        <p>To</p>
+                    </div>
+                    <div class="travel-info">
+                        <img src="assets/date.png" alt="">
+                        <p>Date</p>
+                    </div>
+                    <div class="travel-info search-btn">
+                        <p>Search Buses</p>
+                    </div>
+                </div>
+            </div>
+            <div class="offer-container">
+                <div class="offer-heading">
+                    <h2>Trending Offers</h2>
+                    <button>View All</button>
+                </div>
+                <div class="cards-container">
+                    <div class="card card1">
+                        <img src="https://st.redbus.in/images/FIRST/first_26th_sep_2022_ravi/tile-80X80.png" alt="">
+                        <div class="card-info">
+                            <span class="type">BUS</span>
+                            <h3>Save upto RS 250 on bus tickets</h3>
+                            <p>Valid till 30 Nov</p>
+                            <div class="promo-code">
+                                <span class="code">FIRST</span>
+                                <img class="copy" src="https://s2.rdbuz.com/web/images/homeV2/copy.svg" alt="copy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card2">
+                        <img src="https://st.redbus.in/Images/INDOFFER/HDFC300/80x80.png" alt="">
+                        <div class="card-info">
+                            <span class="type">BUS</span>
+                            <h3>Get 10% upto off Rs 300 on HDFC Bank</h3>
+                            <p>Valid till 14 Nov</p>
+                            <div class="promo-code">
+                                <span class="code">HDFC 100</span>
+                                <img class="copy" src="https://s2.rdbuz.com/web/images/homeV2/copy.svg" alt="copy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card3">
+                        <img src="https://st.redbus.in/Images/INDOFFER/HDFC300/80x80.png" alt="">
+                        <div class="card-info">
+                            <span class="type">BUS</span>
+                            <h3>Save up to Rs 300 on AP, TS routes</h3>
+                            <p>Valid till 30 Nov</p>
+                            <div class="promo-code">
+                                <span class="code">SUPERHIT</span>
+                                <img class="copy" src="https://s2.rdbuz.com/web/images/homeV2/copy.svg" alt="copy">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="card card4">
+                        <img src="https://st.redbus.in/Images/INDOFFER/HDFC300/80x80.png" alt="">
+                        <div class="card-info">
+                            <span class="type">BUS</span>
+                            <h3>Save up to Rs 300 on AP, TS routes</h3>
+                            <p>Valid till 30 Nov</p>
+                            <div class="promo-code">
+                                <span class="code">SUPERHIT</span>
+                                <img class="copy" src="https://s2.rdbuz.com/web/images/homeV2/copy.svg" alt="copy">
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="ad-container">
+                <img src="https://platforms.makemytrip.com/contents/eb882edd-8d39-4cf1-8d57-a04f6e64f7c1" alt="ad">
+            </div>
+        </main>
+    </div>
+</body>
+</html>
