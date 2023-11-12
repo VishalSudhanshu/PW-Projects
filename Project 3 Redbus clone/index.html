@@ -23,7 +23,6 @@
         }
         body{
             height: 100vh;
-            width: 100vw;
             font-family: 'Montserrat', sans-serif;
         }
         nav{
@@ -61,6 +60,11 @@
         .tab img{
             margin-bottom: 0.8rem;
         }
+        .tab:hover{
+            cursor: pointer;
+            background-color: rgb(197, 197, 197);
+            border-radius: 1rem;
+        }
         .accounts{
             display: flex;
             text-align: center;
@@ -86,19 +90,6 @@
             background-repeat: no-repeat;
             background-position: left;
         }
-        html{
-            font-size: 55%;
-        }
-        @media (min-width: 1500px) {
-            .hero-section{
-                height: 58  rem;
-            }
-        }
-        @media (max-width: 1280px) {
-            .hero-section{
-                background-size: contain;
-            }
-        }
         .hero-section{
             display: flex;
             flex-direction: column;
@@ -117,6 +108,7 @@
             background-color: white;
             margin-top: 4rem;
             width: 55%;
+            min-width: 380px;
             max-width: 900px;
             border-radius: 3rem;
             gap: 10px;
@@ -125,19 +117,30 @@
         .travel-info{
             display: flex;
             align-items: center;
-            font-size: 2rem;
+            font-size: 1.75rem;
             padding-left: 2rem;
             cursor: pointer;
+        }
+        .from-to{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 40%;
         }
         .travel-info p{
             padding: 1rem;
         }
-        .travel-info i{
-            padding: 3rem;
+        .travel-info-container i{
+            font-size: 1.75rem;
+            cursor: pointer;
+        }
+        .search-btn {
+            background-color: var(--color-one);
+            border-radius: 0 3rem 3rem 0 ;
+            height: 10rem;
+            padding-right: 1.5rem;
         }
         .search-btn p{
-            background-color: var(--color-one);
-            padding: 3.8rem;
             border-radius: 0 3rem 3rem 0 ;
             color: white;
             text-transform: uppercase;
@@ -209,17 +212,13 @@
             padding: 3.2rem;
             background-color: white;
             width: 105rem;
-            height: 30rem;
             margin: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-top: -15rem;
             gap: 2rem;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%);
             border-radius: 4rem;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
         }
@@ -248,7 +247,7 @@
             flex-wrap: wrap;
         }
         .ad-container{
-            padding-top: 28rem;
+            margin-top: 4rem;
             display: flex;
             justify-content: center;
             cursor: pointer;
@@ -256,10 +255,76 @@
         .ad-container img{
             width: 50%;
             max-width: 97rem;
+            min-width: 350px;
             height: 9rem;
             border-radius: 10px;
         }
-
+        @media (max-width: 1300px) {
+            html{
+                font-size: 55%;
+            }
+            .hero-section{
+                background-size: contain;
+            }
+        }
+        @media (max-width: 1080px) {
+            html{
+                font-size: 50%;
+            }
+        }
+        @media (max-width: 425px) {
+            html{
+                font-size: 45%;
+            }
+            .travel-info img{
+                display: none;
+            }
+            .hero-section{
+                background: var(--color-one);
+                margin: auto;
+            }
+            .offer-container{
+                max-width: 350px;
+                height: max-content;
+            }
+            .card{
+                min-width: 300px;
+            }
+            .card h3{
+                font-size: 1.8rem;
+            }
+            .card span{
+                font-size: 1.5rem;
+            }
+            .cards-container{
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+            }
+            .hero-section h1{
+                padding: 0 2rem;
+                text-align: center;
+            }
+            .search-btn{
+                border: 2px solid #652d2f;
+                padding: 1rem;
+            }
+            .tab-container{
+                display: none;
+            }
+            nav span{
+                display: none;
+            }
+            nav{
+                font-size: 2rem
+            }
+            .logo{
+                padding: 0 2rem;
+            }
+            .offer-heading button{
+                min-width: 90px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -304,14 +369,16 @@
             <div class="hero-section">
                 <h1>India's No. 1 Online Bus Ticket Booking Site</h1>
                 <div class="travel-info-container">
-                    <div class="travel-info">
-                        <img src="assets/fromTrain.png" alt="">
-                        <p>From</p>
-                    </div>
-                    <div class="travel-info">
+                    <div class="from-to">
+                        <div class="travel-info">
+                            <img src="assets/fromTrain.png" alt="">
+                            <p>From</p>
+                        </div>
                         <i class="fa-solid fa-right-left"></i>
-                        <img src="assets/toTrain.png" alt="">
-                        <p>To</p>
+                        <div class="travel-info">
+                            <img src="assets/toTrain.png" alt="">
+                            <p>To</p>
+                        </div>
                     </div>
                     <div class="travel-info">
                         <img src="assets/date.png" alt="">
@@ -353,7 +420,7 @@
                         </div>
                     </div>
                     <div class="card card3">
-                        <img src="https://st.redbus.in/Images/INDOFFER/HDFC300/80x80.png" alt="">
+                        <img src="https://st.redbus.in/Images/INDOFFER/80x80/SUPERHIT.png" alt="">
                         <div class="card-info">
                             <span class="type">BUS</span>
                             <h3>Save up to Rs 300 on AP, TS routes</h3>
