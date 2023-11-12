@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/2d017ccb5b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Redbus Clone</title>
     <style>
         *{
@@ -22,7 +22,10 @@
             font-size: 62.5%;
         }
         body{
-            height: 100vh;
+            height: 150vh;
+            font-family: 'Montserrat', sans-serif;
+        }
+        button{
             font-family: 'Montserrat', sans-serif;
         }
         nav{
@@ -36,7 +39,7 @@
             font-weight: 500;
         }
         nav span{
-            color: #949494;
+            color: #adadad;
             font-size: 2rem;
         }
         .navbar{
@@ -247,7 +250,7 @@
             flex-wrap: wrap;
         }
         .ad-container{
-            margin-top: 4rem;
+            margin: 4rem 0;
             display: flex;
             justify-content: center;
             cursor: pointer;
@@ -258,6 +261,84 @@
             min-width: 350px;
             height: 9rem;
             border-radius: 10px;
+        }
+        .navbar-container{
+            background-color: #fff;
+            position: sticky;
+            top: 0%;
+        }
+        .about-us{
+            max-width: 1200px;
+            display: flex;
+            margin: auto;
+            margin-top: 6rem;
+            padding-top: 4rem;
+        }
+        .right{
+            background-image: url("https://s3.rdbuz.com/web/images/homeV2/AboutUs/aboutUsImg.svg");
+            background-repeat: no-repeat;
+            background-position: right;
+            border-radius: 40px;
+        }
+        .left h2{
+            font-size: 4rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        .about-btn-conatainer{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 3.2rem;
+            border-bottom: 1px solid #adadad;
+        }
+        .about-btn-conatainer span{
+            font-size: 2.5rem;
+            color: #adadad;
+        }
+        .about-btn-conatainer button{
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            color: var(--color-one);
+            font-weight: 700;
+            padding: 1.4rem 1.6rem;
+            background-color: #fff;
+            font-size: 1.6rem;
+            border: none;
+            cursor: pointer;
+        }
+        .about-btn-conatainer button img{
+            height: 28px;
+            width: 50px;
+        }
+        .about-description p{
+            margin-top: 3rem;
+            margin-bottom: 2.4rem;
+            font-size: 1.8rem;
+        }
+        .about-description li{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            gap: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.6rem;
+        }
+        .book-btn{
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+            margin-top: 4.2rem;
+            background-color: var(--color-one);
+            color: white;
+            font-size: 1.8rem;
+            padding: 1.44rem 1.6rem;
+            border: none;
+            font-weight: 700;
+            border-radius: 12px;
+            cursor: pointer;
         }
         @media (max-width: 1300px) {
             html{
@@ -274,7 +355,7 @@
         }
         @media (max-width: 425px) {
             html{
-                font-size: 45%;
+                font-size: 48%;
             }
             .travel-info img{
                 display: none;
@@ -316,7 +397,8 @@
                 display: none;
             }
             nav{
-                font-size: 2rem
+                font-size: 2rem;
+                height: 80px;
             }
             .logo{
                 padding: 0 2rem;
@@ -324,47 +406,56 @@
             .offer-heading button{
                 min-width: 90px;
             }
+            .right{
+                display: none;
+            }
+            .about-us{
+                padding: 10px;
+            }
+            .about-description p{
+            font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <nav>
-            <div class="navbar">
-                <div class="logo">
-                    <img src="https://st.redbus.in/Images/rdc/rdc-redbus-logo.svg" alt="">
-                </div>
-
-                <span>|</span>
+        <div class="navbar-container">
+            <nav>
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="https://st.redbus.in/Images/rdc/rdc-redbus-logo.svg" alt="">
+                    </div>
     
-                <div class="tab-container">
-                    <div class="tab">
-                        <img src="https://st.redbus.in/web/images/layout/rb_vertical.svg" alt="">
-                        <p>Bus Tickets</p>
-                    </div>
-                    <div class="tab">
-                        <img src="https://st.redbus.in/web/images/layout/ryde_vertical.svg" alt="">
-                        <p>Cab Rental</p>
-                    </div>
-                    <div class="tab">
-                        <img src="https://st.redbus.in/web/images/layout/rail_vertical.svg" alt="">
-                        <p>Train Tickets</p>
+                    <span>|</span>
+        
+                    <div class="tab-container">
+                        <div class="tab">
+                            <img src="https://st.redbus.in/web/images/layout/rb_vertical.svg" alt="">
+                            <p>Bus Tickets</p>
+                        </div>
+                        <div class="tab">
+                            <img src="https://st.redbus.in/web/images/layout/ryde_vertical.svg" alt="">
+                            <p>Cab Rental</p>
+                        </div>
+                        <div class="tab">
+                            <img src="https://st.redbus.in/web/images/layout/rail_vertical.svg" alt="">
+                            <p>Train Tickets</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-
-            <div class="accounts">
-                <div class="tab">
-                    <i class="ri-customer-service-line"></i>
-                    <p>Help</p>
+                <div class="accounts">
+                    <div class="tab">
+                        <i class="ri-customer-service-line"></i>
+                        <p>Help</p>
+                    </div>
+                    <div class="tab">
+                        <i class="ri-account-circle-line"></i>
+                        <p>Account</p>
+                    </div>
                 </div>
-                <div class="tab">
-                    <i class="ri-account-circle-line"></i>
-                    <p>Account</p>
-                </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
         <main>
             <div class="hero-section">
                 <h1>India's No. 1 Online Bus Ticket Booking Site</h1>
@@ -448,6 +539,71 @@
             <div class="ad-container">
                 <img src="https://platforms.makemytrip.com/contents/eb882edd-8d39-4cf1-8d57-a04f6e64f7c1" alt="ad">
             </div>
+            <section class="about-us">
+                <div class="left">
+                    <h2>Now,<b> get more than just bus </b>tickets with Redbus!</h2>
+                    <div class="about-btn-conatainer">
+                        <button>
+                            <img src="https://s2.rdbuz.com/web/images/homeV2/AboutUs/ryde.svg" alt="">
+                            Cab/Bus Rental
+                        </button>
+                        <span>|</span>
+                        <button>
+                            <img src="https://s1.rdbuz.com/web/images/homeV2/AboutUs/redRail.svg" alt="">
+                            Train Tickets
+                        </button>        
+                    </div>
+                    <div class="about-description">
+                        <p>Rent Cabs, Tempo Travellers & Buses with best drivers</p>
+                        <ul>
+                            <li><img src="https://s3.rdbuz.com/web/images/homeV2/AboutUs/ryde_car.svg" alt="">Outstation</li>
+                            <li><img src="https://s1.rdbuz.com/web/images/homeV2/AboutUs/ryde_car_hourly.svg" alt="">Hourly Rental</li>
+                            <li><img src="https://s2.rdbuz.com/web/images/homeV2/AboutUs/ryde_airport_transport.svg" alt="">Airport Transfers</li>
+                        </ul>
+                    </div>
+                    <button class="book-btn">
+                        Book Cab / Bus Rental 
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="right">
+                    <img src="https://s3.rdbuz.com/web/images/homeV2/AboutUs/rydePop.svg" alt="">
+                </div>
+            </section>
+            <!-- <section class="app-install-container">
+                <h2>Enjoy the App!</h2>
+                <div class="app-info-wrapper">
+                    <div class="app-info">
+                        <ul>
+                            <li><img src="https://s3.rdbuz.com/web/images/homeV2/appinstall/tick.svg" alt="tick">Quick access</li>
+                            <li><img src="https://s3.rdbuz.com/web/images/homeV2/appinstall/tick.svg" alt="tick">Superior live tracking</li>
+                        </ul>
+                        <div class="rating">
+                            <div class="rating-info">
+                                <p>4.5<i class="fa-solid fa-star"></i></p>
+                                <p>50M+ downloads</p>
+                                <p>Play Store</p>
+                            </div>
+                            <div class="rating-info">
+                                <p>4.6<i class="fa-solid fa-star"></i></p>
+                                <p>50M+ downloads</p>
+                                <p>App Store</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-section">
+                        <div class="scan-info">
+                            <h3>Scan to download</h3>
+                            <img src="https://s1.rdbuz.com/web/images/homeV2/qrCode.svg" alt="qrCode">
+                        </div>
+                        <div class="download-links">
+                            <h3>Download the App on</h3>
+                            <img src="https://s2.rdbuz.com/web/images/homeV2/appinstall/playStore.svg" alt="playStore">
+                            <img src="https://s3.rdbuz.com/web/images/homeV2/appinstall/appStore.svg" alt="appStore">
+                        </div>
+                    </div>
+                </div>
+            </section> -->
         </main>
     </div>
 </body>
