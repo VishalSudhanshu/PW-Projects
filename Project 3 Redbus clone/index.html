@@ -273,6 +273,7 @@
             margin: auto;
             margin-top: 6rem;
             padding-top: 4rem;
+            margin-bottom: 10rem;
         }
         .right{
             background-image: url("https://s3.rdbuz.com/web/images/homeV2/AboutUs/aboutUsImg.svg");
@@ -339,6 +340,113 @@
             font-weight: 700;
             border-radius: 12px;
             cursor: pointer;
+        }
+        .app-install-container{
+            margin: auto;
+            width: 120rem;
+            max-width: 1200px;
+            background-image: url("https://s1.rdbuz.com/web/images/homeV2/appinstall/appInstallbg.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 40px;
+            padding: 3.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+        }
+        .app-install-container h2{
+            font-size: 4rem;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .app-info-wrapper{
+            display: flex;
+            gap: 8rem;
+        }
+        .app-info{
+            background-color: #fff;
+            padding: 4.8rem 3.2rem;
+            border-radius: 16px;
+        }
+        .app-info ul{
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+            margin-bottom: 3.6rem;
+        }
+        .app-info li{
+            display: flex;
+            align-items: center;
+            list-style: none;
+            font-size: 1.8rem;
+            gap: 1.2rem;
+        }
+        .download-section{
+            display: flex;
+        }
+        .download-links{
+            display: flex;
+            flex-direction: column;
+        }
+        .rating{
+            display: flex;
+            gap: 3.5rem;
+        }
+        .rating-info{
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        .rating h3{
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            color: rgb(74, 74, 74);
+            gap: 0.6rem;
+        }
+        .rating i{
+            font-size: 1.5rem;
+        }
+        .rating p{
+            font-size: 1.4rem;
+        }
+        .rating b{
+            font-weight: 600
+        }
+        .divider{
+            min-height: 2.5rem;
+            border: 1px solid rgba(74, 74, 74, 0.421);
+        }
+        .download-section{
+            display: flex;
+            gap: 8rem;
+            margin-top: 4.8rem;
+        }
+        .download-section h3{
+            max-width: 119px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .scan-info{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .scan-info img{
+            width: 106px;
+            height: 106px;
+        }
+        .download-links{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .download-links .links{
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
         }
         @media (max-width: 1300px) {
             html{
@@ -411,9 +519,26 @@
             }
             .about-us{
                 padding: 10px;
+                margin-bottom: 3rem;
             }
             .about-description p{
             font-size: 2rem;
+            }
+            .app-install-container{
+                background-image: none;
+                background-color: var(--color-one);
+                max-width:370px;
+            }
+            .app-info-wrapper{
+                flex-direction: column;
+                gap: 4rem;
+            }
+            .download-section h3{
+                font-size: 2.4rem;
+            }
+            .download-section{
+                margin: auto;
+                gap: 4rem;
             }
         }
     </style>
@@ -570,7 +695,7 @@
                     <img src="https://s3.rdbuz.com/web/images/homeV2/AboutUs/rydePop.svg" alt="">
                 </div>
             </section>
-            <!-- <section class="app-install-container">
+            <section class="app-install-container">
                 <h2>Enjoy the App!</h2>
                 <div class="app-info-wrapper">
                     <div class="app-info">
@@ -580,14 +705,15 @@
                         </ul>
                         <div class="rating">
                             <div class="rating-info">
-                                <p>4.5<i class="fa-solid fa-star"></i></p>
+                                <h3>4.5<i class="fa-solid fa-star"></i></h3>
                                 <p>50M+ downloads</p>
-                                <p>Play Store</p>
+                                <p><b>Play Store</b></p>
                             </div>
+                            <div class="divider"></div>
                             <div class="rating-info">
-                                <p>4.6<i class="fa-solid fa-star"></i></p>
+                                <h3>4.6<i class="fa-solid fa-star"></i></h3>
                                 <p>50M+ downloads</p>
-                                <p>App Store</p>
+                                <p><b>App Store</b></p>
                             </div>
                         </div>
                     </div>
@@ -598,12 +724,16 @@
                         </div>
                         <div class="download-links">
                             <h3>Download the App on</h3>
-                            <img src="https://s2.rdbuz.com/web/images/homeV2/appinstall/playStore.svg" alt="playStore">
-                            <img src="https://s3.rdbuz.com/web/images/homeV2/appinstall/appStore.svg" alt="appStore">
+                            <div class="links">
+                                <a href="#">
+                                    <img src="https://s2.rdbuz.com/web/images/homeV2/appinstall/playStore.svg" alt="playStore">
+                                </a>
+                                <a href="#"><img src="https://s3.rdbuz.com/web/images/homeV2/appinstall/appStore.svg" alt="appStore"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
         </main>
     </div>
 </body>
