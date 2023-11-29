@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gmail clone</title>
+  <link href="output.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body class="w-screen bg-[#f6f8fc]">
+  <nav class="w-full h-16 flex py-2 items-center bg-[#f6f8fc]">
+    <section class="flex items-center">
+      <div class="menu text-center w-[70px] h-16 bg-[#eaf1fb] flex items-center justify-center">
+        <i class="ri-menu-line text-xl"></i>
+      </div>
+      <div class="logo w-64 pl-6">
+        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png" alt="logo">
+      </div>
+    </section>
+
+    <section class="flex items-center justify-between w-full">
+      <div class="flex justify-between items-center bg-[#eaf1fb] w-full min-w-max rounded-full px-2 max-w-[710px]">
+        <i class="ri-search-line text-lg rounded-full p-1"></i>
+        <input placeholder="Search in mail" type="text" class="bg-[#eaf1fb] h-12 w-full p-2 focus:outline-none pb-2.5 placeholder:text-gray-500"/>
+        <button class="px-2"><i class="ri-equalizer-fill text-lg"></i></button>
+      </div>
+      <ul class="flex items-center gap-5 ml-8">
+          <li class="h-12 flex items-center gap-1 bg-[#eaf1fb] py-4 px-2 rounded-full">
+            <div class="status-logo w-3 h-3 bg-green-600 rounded-full"></div>
+            <span class="pl-1">Active</span>
+            <i class="ri-arrow-down-s-line"></i>
+        </li>
+        <li class="">
+          <button><i class="ri-question-line text-2xl"></i></button>
+        </li>
+        <li class="">
+          <button><i class="ri-settings-3-line text-2xl"></i></i></button>
+        </li>
+        <li class="p-1">
+          <button><i class="ri-grid-fill text-2xl"></i></button>
+        </li>
+        <li class="mr-5">
+          <button>
+              <div class="h-8 w-8 bg-purple-700 text-white rounded-full pt-1">
+                V
+              </div>
+          </button>
+        </li>
+      </ul>
+    </section>
+  </nav>
+  <main class="flex">
+    <aside class="w-[70px]  bg-[#eaf1fb] h-[calc(100vh-70px)]">
+      <div class="w-full flex flex-col items-center my-6">
+        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/mail_baseline_nv700_20dp.png" class="h-5 w-5" alt="mail">
+        <p class="pt-1 text-xs">Mail</p>
+      </div>
+      <div class="w-full flex flex-col items-center my-6">
+        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/chat_bubble_baseline_nv700_20dp.png" class="h-5 w-5" alt="chat">
+        <p class="pt-1 text-xs">Chat</p>
+      </div>
+      <div class="w-full flex flex-col items-center my-6">
+        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/gmail_groups_baseline_nv700_20dp.png" class="h-5 w-5" alt="spaces">
+        <p class="pt-1 text-xs">Spaces</p>
+      </div>
+      <div class="w-full flex flex-col items-center my-6">
+        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/meet_baseline_nv700_20dp.png" class="h-5 w-5" alt="meet">
+        <p class="pt-1 text-xs">Meet</p>
+      </div>
+    </aside>
+    
+    <section class="px-2.5 h-64">
+      <button class="mt-2.5 bg-[#c2e7ff] h-14 flex items-center pr-5 pl-4 rounded-2xl hover:shadow-xl"><img src="https://www.gstatic.com/images/icons/material/system_gm/2x/create_black_24dp.png" class="h-6 w-6 mr-3" alt="compose">Compose</button>
+      <ul class="mt-3.5 px-2 w-60">
+        <li class="flex px-3.5 mt-2 mb-1 py-0.5  items-center bg-[#d3e3fd] rounded-full hover:bg-slate-300">
+          <img src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/inbox_fill_baseline_p900_20dp.png" class="h-5 w-5" alt="Inbox">
+          <p class="pl-3.5 ">Inbox</p>
+        </li>
+        <li class="flex px-3.5 my-1 p-0.5  items-center hover:bg-slate-300 rounded-full">
+          <img src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/star_baseline_nv700_20dp.png" class="h-5 w-5" alt="Starred">
+          <p class="pl-3.5 ">Starred</p>
+        </li>
+        <li class="flex px-3.5 my-1 p-0.5 items-center hover:bg-slate-300 rounded-full">
+          <img src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/schedule_baseline_nv700_20dp.png" class="h-5 w-5" alt="Snoozed">
+          <p class="pl-3.5 ">Snoozed</p>
+        </li>
+        <li class="flex px-3.5 my-1 p-0.5 items-center hover:bg-slate-300 rounded-full">
+          <img src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/send_baseline_nv700_20dp.png" class="h-5 w-5" alt="Sent">
+          <p class="pl-3.5 ">Sent</p>
+        </li>
+        <li class="flex px-3.5 my-1 p-0.5 items-center hover:bg-slate-300 rounded-full">
+          <img src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/draft_baseline_nv700_20dp.png" class="h-5 w-5" alt="Drafts">
+          <p class="pl-3.5 ">Drafts</p>
+        </li>
+        <li class="flex px-3.5 my-1 p-0.5 items-center hover:bg-slate-300 rounded-full">
+          <img src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/expand_more_baseline_nv700_20dp.png" class="h-5 w-5" alt="More">
+          <p class="pl-3.5 ">More</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="bg-white w-[calc(100vw-346px)] rounded-2xl">
+      <div class="flex items-center justify-between">
+        <div class="py-3 px-4 flex gap-6 h-12">
+          <div>
+            <input type="checkbox"  name="select" id="select"/>
+            <i class="ri-arrow-drop-down-fill"></i>
+          </div>
+          <button><i class="ri-restart-line font-medium"></i></button>
+          <button><i class="ri-more-2-line font-bold"></i></button>
+        </div>
+        <div class="flex items-center px-5 gap-4">
+          <p class="text-xs text-slate-500">1-50 of 550</p>
+          <i class="ri-arrow-drop-left-line text-xl"></i>
+          <i class="ri-arrow-drop-right-line text-xl"></i>
+        </div>
+      </div>
+
+      <div class="flex gap-2">
+        <button class="w-56 h-14 flex items-center mx-2 border-b-2 border-blue-700">
+          <img class="h-5 w-5 mx-3" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/inbox_baseline_nv700_20dp.png" alt="primary"/>
+          <p class="m-1 text-blue-700 font-semibold">Primary</p>
+        </button>
+        <button class="w-64 h-14 flex items-center mx-2">
+          <img class="h-5 w-5 mx-3" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/sell_baseline_nv700_20dp.png" alt="promotional"/>
+          <p class="m-1">Promotions</p>
+        </button>
+        <button class="w-64 h-14 flex items-center mx-2">
+          <img class="h-5 w-5 mx-3" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/group_baseline_nv700_20dp.png" alt=""/>
+          <p class="m-1">Social</p>
+        </button>
+      </div>
+      <div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+        <div class="h-10 flex items-center px-4 bg-[#f6f8fc]">
+          <div class="flex gap-4">
+            <input type="checkbox" name="" id=""/>
+            <i class="ri-star-line"></i>
+          </div>
+          <h3 class="px-4 w-[168px]">PW</h3>
+          <p>Important mail for 2 step verification ccccccccccccccc.......</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
